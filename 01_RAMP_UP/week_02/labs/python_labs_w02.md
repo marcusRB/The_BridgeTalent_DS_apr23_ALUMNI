@@ -3,14 +3,21 @@
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+ for i in numbers:
+    print(numbers[1::2])
 
 2. Dada una lista de números, utiliza un bucle while para imprimir solo los números impares.
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ for i in numbers:
+    print(numbers[0::2])
+
 
 3. Dado un diccionario de frutas y sus precios, utiliza un bucle for para imprimir solo las frutas con precios mayores a 2.
 
 fruits = {"manzana": 1.5, "naranja": 2.0, "platano": 3.0, "kiwi": 2.5}
+claves=fruits.
+    for i in fruits:
 
 4. Dada una lista de nombres, utiliza un bucle while para imprimir el primer nombre que comience con "J".
 
