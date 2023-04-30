@@ -1,13 +1,11 @@
 from random import choice
 
 
-elementos = {
+jugadas_validas = {
     '1': 'Piedra',
     '2': 'Papel',
     '3': 'Tijera'
 }
-
-jugadas_validas = ['1', '2', '3']
 
 
 def human_play():
@@ -20,16 +18,16 @@ def human_play():
         print('3.) Tijera')
         jugada = input('...')
 
-        if jugada in jugadas_validas:
+        if jugada in jugadas_validas.keys():
             print()
-            return elementos[jugada]
+            return jugadas_validas[jugada]
         else:
             print()
             print(f'El valor {jugada} es incorrecto')
 
 
 def computer_play():
-    return elementos[choice(jugadas_validas)]
+    return jugadas_validas[choice(list(jugadas_validas.keys()))]
 
 
 def eval_plays(humano, computer, human_score, computer_score):
