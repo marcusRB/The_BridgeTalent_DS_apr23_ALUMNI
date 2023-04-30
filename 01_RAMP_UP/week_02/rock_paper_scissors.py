@@ -7,9 +7,12 @@ elementos = {
     '3': 'Tijera'
 }
 
+jugadas_validas = ['1', '2', '3']
+
 
 def human_play():
-    while 1:
+
+    while True:
         print()
         print('Humano, elige jugada')
         print('1.) Piedra')
@@ -17,7 +20,7 @@ def human_play():
         print('3.) Tijera')
         jugada = input('...')
 
-        if jugada in ['1', '2', '3']:
+        if jugada in jugadas_validas:
             print()
             return elementos[jugada]
         else:
@@ -26,7 +29,7 @@ def human_play():
 
 
 def computer_play():
-    return elementos[choice(['1', '2', '3'])]
+    return elementos[choice(jugadas_validas)]
 
 
 def eval_plays(humano, computer, human_score, computer_score):
@@ -80,10 +83,10 @@ human_score = 0
 computer_score = 0
 
 for i in range(num_jugadas):
-    humano = human_play()
-    computer = computer_play()
+    jugada_humano = human_play()
+    jugada_computer = computer_play()
     human_score, computer_score = eval_plays(
-        humano, computer, human_score, computer_score)
+        jugada_humano, jugada_computer, human_score, computer_score)
 
 
 print()
