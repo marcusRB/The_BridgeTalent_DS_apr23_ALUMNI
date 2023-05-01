@@ -21,3 +21,18 @@ La práctica será verificada y se dejará un feedback. Finalmente se enviará u
 
 según la situación que sea no se aceptará una **PULL REQUEST** para no alterar la estructura del repositorio original, por lo tanto se procederá con el cierre!
  
+pozo = 125  # profundidad del pozo en cm
+resbala = 20   # cantidad de cm que resbala cada noche
+progreso = 0 # cantidad de cm que ha avanzado el caracol
+
+avance_cm = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]
+dias = 0     # contador de días
+while progreso < pozo:
+    dias += 1
+    progreso += avance_cm[dias-1]
+    if progreso >= pozo:
+        break
+    else:
+        progreso -= resbala
+
+print("El caracol tardó", dias, "días en escapar del pozo.")
